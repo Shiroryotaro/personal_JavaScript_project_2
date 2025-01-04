@@ -1,0 +1,35 @@
+.custom-bg-info{
+    background-color: #0DCAF0; /* Bootstrap info color */
+    padding: 10px; /* Optional for better visibility */
+    border-radius: 5px; /* Optional for styling */
+}
+
+.custom-bg-primary{
+    background-color: #0D6EFD;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.custom-text-color{
+    color: white;
+}
+
+.custom-text-color2{
+    color: black;
+}
+
+#containercatalog{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gameentrydiv{
+    margin: 10px;
+    border: black 2px solid;
+}
+
+#gamedevviewbyid{
+    text-align: center;
+}
+
