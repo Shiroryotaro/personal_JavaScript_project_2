@@ -25,11 +25,11 @@ const gameEngineEntrySchema = new Schema(
         },
         notableGamesDeveloped: {
             type: String,
-            required: [true, "List atleast 1 game"],
+            required: [true, "List at least 1 game"],
         },
         yearReleased: {
             type: Number,
-            required: [true, "This field is required"],
+            required: [true, "Year of game release required"],
             validate: {
                 validator: (value) => value >= 1900 && value <= new Date().getFullYear(),
                 message: 'Year must be between 1900 and the current year.'
