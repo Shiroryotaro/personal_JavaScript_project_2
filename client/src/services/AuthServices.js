@@ -20,7 +20,7 @@ export const login = async(data) => {
         const RESponse = await AUTH_INSTANCE.post('/login', data)
         localStorage.setItem("token", RESponse.data.token)
         return RESponse.data
-    } catch(error){throw error.response.data.validationErrors}
+    } catch(error){throw error.response?.data?.validationErrors || { general: error.response?.data?.message || 'Login failed' }}
 }
 
 //LOGOUT

@@ -30,7 +30,10 @@ export const LoginUserForm = () => {
             console.log("Log-In Successfully:", res)
             navigate("/gamedev/catalog")
         })
-        .catch(error => setValidationErrors(error))
+        .catch(error => {
+            console.error("Login error:", error);
+            setValidationErrors(error);
+        })
     }
 
     return(
@@ -42,6 +45,7 @@ export const LoginUserForm = () => {
                         Login User
                     </h1>
                     <Form onSubmit={handleSubmit} className="custom-bg-info">
+                    {validationErrors.general && <p style={{color: "red"}}>{validationErrors.general}</p>}
                         <Form.Group className="mb-3" controlId="loginFormEmail">
                             <Form.Label className="custom-text-color">Email</Form.Label>
                                 <Form.Control
@@ -49,6 +53,7 @@ export const LoginUserForm = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={updateFormData}/>
+                                {validationErrors.email && <p style={{color: "red"}}>{validationErrors.email}</p>}
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="loginFormPassword">
                             <Form.Label className="custom-text-color">Password</Form.Label>
@@ -57,6 +62,7 @@ export const LoginUserForm = () => {
                                 name="password"
                                 value={formData.password}
                                 onChange={updateFormData}/>
+                                {validationErrors.password && <p style={{color: "red"}}>{validationErrors.password}</p>}
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Login User
