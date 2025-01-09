@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { FaCheck } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { use } from 'react';
 
 const GameDevViewById = () => {
 
@@ -37,7 +36,6 @@ const GameDevViewById = () => {
     navigate('/gamedev/catalog'))
     .catch(error => console.log("GameDevViewById", error))
     }
-
 
     return (
     <Container id='gamedevviewbyid' className="d-flex flex-column p-4">

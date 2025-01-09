@@ -10,8 +10,8 @@ const gameEngineEntrySchema = new Schema(
         },
         reason_description: {
             type: String,
-            required: [true, "Reason/Description must be 7 or more characters."],
-            minlength: [7, "Reason/Description must be 7 or more characters."]
+            required: [true, "Reason/Description must be 5 or more characters."],
+            minlength: [5, "Reason/Description must be 5 or more characters."]
         },
         openSource: {
             type: Boolean,
